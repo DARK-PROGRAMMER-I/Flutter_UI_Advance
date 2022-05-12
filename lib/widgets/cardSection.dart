@@ -1,4 +1,5 @@
 import 'package:dashboard_advance_ui/data.dart';
+import 'package:dashboard_advance_ui/widgets/card_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -54,12 +55,14 @@ class CardSection extends StatelessWidget {
                           ),
                         ),
                       ),
+                      CardDetails()
                     ],
                   ),
                 );
                 }
             ),
         ),
+
       ],
     );
   }

@@ -19,3 +19,24 @@ List<BoxShadow> customShadow =
         blurRadius: 20
       ),
     ];
+
+
+List expences = [
+  {'name':'groceries' , 'amount': 500},
+  {'name':'online shopping' , 'amount': 300},
+  {'name':'flutter shop' , 'amount': 800},
+  {'name':'django tutorial' , 'amount': 100},
+  {'name':'relexai' , 'amount': 50},
+  {'name':'hola Dc' , 'amount': 20},
+];
+
+
+List pieColors= [
+  Colors.indigo[400],
+  Colors.grey,
+  Colors.orange,
+  Colors.amberAccent,
+  Colors.black54,
+  Colors.purple,
+
+];

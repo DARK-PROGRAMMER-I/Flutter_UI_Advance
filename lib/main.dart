@@ -1,5 +1,6 @@
 import 'package:dashboard_advance_ui/data.dart';
 import 'package:dashboard_advance_ui/widgets/cardSection.dart';
+import 'package:dashboard_advance_ui/widgets/expences.dart';
 import 'package:dashboard_advance_ui/widgets/header.dart';
 import 'package:flutter/material.dart';
 void main(){
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
                 child: WalletHeader(),
               ),
               Expanded(child: Container(child: CardSection(),)),
-              Expanded(child: Container()),
+              Expanded(child: Container(child: ExpenceSection(),)),
             ],
           ),
 

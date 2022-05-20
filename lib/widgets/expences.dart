@@ -1,4 +1,5 @@
 import 'package:dashboard_advance_ui/data.dart';
+import 'package:dashboard_advance_ui/widgets/pie_chart.dart';
 import 'package:flutter/material.dart';
 
 class ExpenceSection extends StatelessWidget {
@@ -7,52 +8,40 @@ class ExpenceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Container(
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            child: Text("Expences", style: TextStyle(fontSize: 17 , fontWeight: FontWeight.w800),)),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                child: Text('Monthly Expences')),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  width: 45,
-                  height: 35,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: primaryColor,
-                        boxShadow: customShadow),
-                    child: IconButton(
-                      splashColor: primaryColor,
-                      focusColor: primaryColor,
-                      highlightColor: Colors.blue[100],
-                      onPressed: (){},
-                      icon: Icon(Icons.arrow_back_ios_rounded, size: 18,),
-                    ),
-                ),
-                SizedBox(width: 10,),
-                GestureDetector(
-                  onTap: (){},
-                  child: Container(
+            Expanded(
+              flex: 5,
+                child: Container(
+                  margin: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                  child: Column(
 
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                        color: primaryColor,
-                        boxShadow: customShadow),
-                  // margin: EdgeInsets.,
-                  child: IconButton(
-                    splashColor: primaryColor,
-                    focusColor: primaryColor,
-                    highlightColor: Colors.blue[100],
-                    icon: Icon(Icons.arrow_forward_ios_rounded,size: 18,),
-                    onPressed: (){},
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: expences.map((value) =>  SingleChildScrollView(
+                      child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 5),
+                          child: Row(
+                            // crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              CircleAvatar(radius: 5, backgroundColor: pieColors[expences.indexOf(value)],),
+                              SizedBox(width: 20,),
+                              Text( value['name'] , style: TextStyle(fontSize: 16),)
+                            ],
+                          ),
+                        ),
+                    ),
+
+
+                    ).toList(),
                   ),
-              ),
-                ),
-                SizedBox(width: 30,),
-              ],),
+                )
+            ),
+            Expanded(flex: 5,child: PieChart()),
           ],
         ),
       ],

@@ -22,12 +22,12 @@ List<BoxShadow> customShadow =
 
 
 List expences = [
-  {'name':'groceries' , 'amount': 500},
-  {'name':'online shopping' , 'amount': 300},
-  {'name':'flutter shop' , 'amount': 800},
-  {'name':'django tutorial' , 'amount': 100},
-  {'name':'relexai' , 'amount': 50},
-  {'name':'hola Dc' , 'amount': 20},
+  {'name':'Groceries' , 'amount': 100},
+  {'name':'Online shopping' , 'amount': 200},
+  {'name':'Flutter shop' , 'amount': 350},
+  {'name':'Django tutorial' , 'amount': 150},
+  {'name':'Relexai' , 'amount': 50},
+  {'name':'Hola Dc' , 'amount': 80},
 ];
 
 
